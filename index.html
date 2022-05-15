@@ -39,7 +39,7 @@
                 <input id="placeText" type="text" class="form-control" @keyup.enter="search()" />
                 <button class="btn btn-primary" v-on:click="search()">Search</button>
             </div>
-            <iframe width="600" height="400" style="border:0" loading="lazy" allowfullscreen
+            <iframe width="400vw" height="400" style="border:0" loading="lazy" allowfullscreen
                 :src="'https://www.google.com/maps/embed/v1/search?q=' + place + '&key=AIzaSyDLSDM6y6ojFXe9y6kNgt1TOxQDP5eodEo'">
             </iframe>
             <div class="flex future">
