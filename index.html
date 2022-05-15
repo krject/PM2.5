@@ -28,18 +28,18 @@
             <div class="col-sm-4 col-xs-4">
                 <div class="head"></div>
             </div>
-            <div class="col-sm-8 col-xs-8">
+            <div class="col-sm-8 col-xs-8 h4">
                 <div>當前時間：{{ nowTime }}</div>
                 <div>{{ currentText }}品質指數：{{ AQ }}</div>
                 <div>{{ currentText }}狀況：{{ qualtity }}</div>
             </div>
         </div>
         <div class="row">
-            <div class="flex searchLine">
+            <div id="searchRow" class="flex searchLine">
                 <input id="placeText" type="text" class="form-control" @keyup.enter="search()" />
                 <button class="btn btn-primary" v-on:click="search()">Search</button>
             </div>
-            <iframe width="400vw" height="400" style="border:0" loading="lazy" allowfullscreen
+            <iframe id="gmap" height="400" style="border:0" loading="lazy" allowfullscreen
                 :src="'https://www.google.com/maps/embed/v1/search?q=' + place + '&key=AIzaSyDLSDM6y6ojFXe9y6kNgt1TOxQDP5eodEo'">
             </iframe>
             <div class="flex future">
