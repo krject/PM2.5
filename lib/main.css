@@ -1,0 +1,204 @@
+html {
+    background-color: rgb(51, 51, 51);
+    /* 動態捲動 */
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: auto;
+    overflow-x: hidden;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    min-height: 80vh;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    /*滾動條外框*/
+    background: rgba(150, 150, 150, 0.9);
+    /*滾動條顏色*/
+}
+
+a {
+    color: rgb(220, 220, 220);
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(220, 220, 220);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(240, 240, 240);
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(220, 220, 220);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(220, 220, 220);
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center-main {
+    justify-content: center;
+}
+
+.flex-center-cross {
+    align-items: center;
+    align-content: center;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.title {
+    position: relative;
+}
+
+.title-active {
+    color: white !important;
+    position: relative;
+}
+
+.title-active::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    top: auto;
+    left: 25px;
+    height: 3px;
+    width: 32px;
+    background-color: #E4262D;
+}
+
+.block {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 10px;
+    background-color: rgb(70, 70, 70);
+}
+
+.block div {
+    margin-bottom: 1vh;
+}
+
+.block h3 {
+    margin-top: 3vh;
+}
+
+.footer {
+    margin-top: 5vh;
+    padding: 1.5vh 1vw 1.5vh 1vw;
+    background-color: rgb(30, 30, 30);
+    position: fixed;
+    bottom: 0;
+    width: 105%;
+}
+
+.timeBlock {
+    text-align: center;
+    font-size: 2rem;
+    background-color: gray;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    padding: 2vh 2vw;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.button-start {
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(#464d55, #25292e);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px;
+    height: 52px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 32px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-start:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.button-start:active {
+    outline: 0;
+}
+
+.button-start:focus {
+    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+    .button-start {
+        height: 48px;
+    }
+}
+
+.head {
+    background-image: url('../img/head.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 12vh;
+    margin-bottom: 3vh;
+}
+
+#map {
+    height: 40vh;
+}
+
+.searchLine {
+    padding: 1vh 1vw;
+}
+
+.searchLine > input:first-child {
+    margin-right: 1vw;
+}
+
+.future{
+    justify-content: flex-end;
+    margin-right: 3vw;
+}
