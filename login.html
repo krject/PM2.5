@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./lib/main.css">
+    <title>都市協作霧霾檢測網</title>
+</head>
+
+<body>
+    <nav id="head" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid flex flex-center-main">
+            <div class="navbar-header" v-for="(title, index) in titleAry">
+                <a class="navbar-brand title-active" :href="linkAry[index]" v-if="index === 1">&ensp;{{ title
+                    }}&ensp;</a>
+                <a class="navbar-brand title" :href="linkAry[index]" v-else>&ensp;{{ title }}&ensp;</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content" class="container">
+        <div class="row">
+            <div class="h1" style="text-align: center;">都市協作霧霾檢測網</div>
+        </div>
+        <div class="row">
+            <div class="block">
+                <div class="input-group">
+                    <span class="input-group-addon">Account &ensp;</span>
+                    <input type="text" class="form-control" placeholder="input your account">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">password</span>
+                    <input type="password" class="form-control" placeholder="input your password">
+                </div>
+                <div class="flex future">
+                    <button type="button" class="btn btn-primary" v-on:click="login()">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row footer">
+        <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1">
+            <div>版權宣告</div>
+        </div>
+        <div class="col-md-7 col-sm-7 col-xs-7">
+            <div>Copyright © 2021 INEMU HC krject. All rights reserved.</div>
+        </div>
+    </div>
+    <script src="./lib/main.js"></script>
+</body>
